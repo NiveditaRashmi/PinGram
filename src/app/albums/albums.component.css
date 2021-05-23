@@ -1,0 +1,13 @@
+.album-card
+{
+width: 60%;
+margin-left: 20% ;
+margin-top: 20px;
+/* height: 300px; */
+}
+
+img {
+  height: 200px;
+
+
+}

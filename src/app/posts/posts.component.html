@@ -1,0 +1,8 @@
+<div class="container-fluid post-wrap">
+  <div class="crate-btn" *ngIf="!createPost">
+    <button type="button" (click)="createPost=true" mat-raised-button>
+      Click to Add New Post</button>
+  </div>
+  <app-post-create *ngIf="createPost" [id]="id"></app-post-create>
+  <app-post-list [id]="id"></app-post-list>
+</div>

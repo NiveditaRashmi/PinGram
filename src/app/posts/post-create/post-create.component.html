@@ -1,0 +1,30 @@
+<div class="accor" *ngIf="newPostCreated">
+<mat-accordion >
+  <mat-expansion-panel>
+    <mat-expansion-panel-header class="newHeader">
+      {{ val.title}}
+    </mat-expansion-panel-header>
+    <p> {{ val.body }}</p>
+    <mat-action-row>
+      <button mat-button color="primary"> EDIT</button>
+      <button mat-button color="warn"> DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+</div>
+<mat-card *ngIf="!newPostCreated">
+  <!-- this postform="ngForm" gives access to the form elements in angular -->
+  <form #postForm="ngForm" (submit)="onAddPost(postForm)">
+    <mat-form-field>
+      <!-- adding required gives error message but the form still gets submitted -->
+      <input matInput type="text"  name="title" ngModel required #title="ngModel" placeholder="Post Title">
+      <mat-error *ngIf="title.invalid"> Please enter a post title. </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea rows="6" matInput name="body" ngModel required #body="ngModel" placeholder="Post Content"></textarea>
+      <mat-error *ngIf="body.invalid">Please enter a post content. </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="submit ">Save Post</button>
+  </form>
+</mat-card>
+

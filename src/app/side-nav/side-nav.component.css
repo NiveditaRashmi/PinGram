@@ -1,0 +1,34 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 30%;
+
+}
+a {
+  background-color: #fdc9db;
+  font-weight: bolder;
+}
+.sidenav .mat-toolbar {
+  background: #880e4f;
+  color: white;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #880e4f;
+}
+
+.avatar {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+
+
+.router-link-active {
+  background-color: green;
+}

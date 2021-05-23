@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.info-text {
+  text-align: center;
+}
+
+div:nth-child(even) {
+  background-color: #fdc9db;
+}
+
+mat-expansion-panel-header:nth-child(even) {
+  background-color: #fdc9db;
+}

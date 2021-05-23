@@ -1,0 +1,18 @@
+<mat-card>
+  <form #postForm="ngForm" (submit)="onEditPost(postForm)">
+    <mat-form-field>
+      <!-- adding required gives error message but the form still gets submitted -->
+      <input matInput type="text"  name="title" n [(ngModel)]="val.title" placeholder="Post Title">
+      <!-- <mat-error *ngIf="title.invalid"> Please enter a post title. </mat-error> -->
+    </mat-form-field>
+    <div>
+    <mat-form-field>
+      <textarea rows="6" matInput name="body" required [(ngModel)]="val.body"></textarea>
+      <!-- <mat-error *ngIf="body.invalid">Please enter a post content. </mat-error> -->
+    </mat-form-field>
+  </div>
+    <div>
+    <button mat-raised-button color="accent" type="submit ">Update Post</button>
+  </div>
+  </form>
+</mat-card>
