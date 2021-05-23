@@ -11,7 +11,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
@@ -21,17 +20,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LoginService } from './login.service';
 import { MglTimelineModule } from 'angular-mgl-timeline';
-import { OnboardingComponent } from './onboarding/onboarding.component';
-import {MatStepperModule} from '@angular/material/stepper';
-import { PersonalDetailsComponent } from './personal-details/personal-details.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
-import { CorrespondenceAddressComponent } from './correspondence-address/correspondence-address.component';
-import { UploadDocsComponent } from './upload-docs/upload-docs.component';
-import { FormService } from './form.service';
-// import { AgmCoreModule } from '@agm/core';
-import { MapComponent } from './map/map.component';
 import { PostsComponent } from './posts/posts.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -45,13 +36,7 @@ import { EditPostComponent } from './edit-post/edit-post.component';
   declarations: [
     AppComponent,
     SideNavComponent,
-    DashboardComponent,
     LoginComponent,
-    OnboardingComponent,
-    PersonalDetailsComponent,
-    CorrespondenceAddressComponent,
-    UploadDocsComponent,
-    MapComponent,
     PostsComponent,
     AlbumsComponent,
     PostCreateComponent,
@@ -78,7 +63,6 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     FormsModule,
-    MatStepperModule,
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
@@ -86,7 +70,6 @@ import { EditPostComponent } from './edit-post/edit-post.component';
 
   ],
   providers: [LoginService,
-  FormService,
   WebRequestService
 ],
   schemas: [

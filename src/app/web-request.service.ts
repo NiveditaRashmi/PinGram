@@ -36,4 +36,8 @@ export class WebRequestService {
      return this.http.get(this.ROOT_URL+'/album'+id+'/photos');
    }
 
+   deletePost(id):Observable<any> {
+     return this.http.delete('https://jsonplaceholder.typicode.com/posts/'+id);
+   }
+
 }

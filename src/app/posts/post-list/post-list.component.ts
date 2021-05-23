@@ -5,6 +5,7 @@ import { EditPostComponent } from '../../edit-post/edit-post.component';
 import { Post } from '../post.model';
 import { WebRequestService } from '../../web-request.service';
 
+declare var swal: any;
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -44,4 +45,19 @@ export class PostListComponent implements OnInit{
   dialogRef.afterClosed().subscribe(res => console.log("after close", res));
 }
 
+deletePost(postId) {
+  alert("are you sure?");
+  this.webService.deletePost(postId).subscribe((res) => {
+    swal({
+      title: 'Deleted Successfully',
+      text: "You won't be able to revert this!",
+      icon: 'error',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'Go Back'
+  })
+  this.posts = this.posts.filter(a => a.id != postId);
+  })
+
+
+}
 }
