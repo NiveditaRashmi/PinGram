@@ -10,7 +10,7 @@
             <div class="form-group" style="text-align: left;">
               <label>Name:</label>
               <input type="text"  class="form-control" formControlName="name"
-              placeholder="enter name">
+              placeholder="Enter name">
             </div>
             <small *ngIf="!loginForm.get('name').valid && loginForm.get('name').touched" class="error">Please enter name.</small>
 
@@ -23,7 +23,7 @@
 
             <div class="form-group" style="text-align: left;">
               <label>Password:</label>
-              <input type="text" class="form-control" formControlName="password"  placeholder="enter zip-code as password">
+              <input type="text" class="form-control" formControlName="password"  placeholder="Enter phone no. as password">
             </div>
             <small *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched" class="error">Please enter name.</small>
 
